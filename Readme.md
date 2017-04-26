@@ -21,6 +21,7 @@ http://www.ndbc.noaa.gov/rt_data_access.shtml
 <td>~ 6.9.1</td>
 </tr>
 </table>
+
 ## Contributions
 
 This Project follows the StandardJS style guide.
