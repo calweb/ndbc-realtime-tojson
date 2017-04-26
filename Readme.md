@@ -4,8 +4,6 @@
 
 Use this module to convert NOAA National Data Bouy Center text product data to json.
 
-http://www.ndbc.noaa.gov/rt_data_access.shtml
-
 ## Information
 
 <table>
@@ -21,6 +19,20 @@ http://www.ndbc.noaa.gov/rt_data_access.shtml
 <td>~ 6.9.1</td>
 </tr>
 </table>
+
+## Usage
+
+```js
+const ndbcToJSON = require('ndbc-realtime-tojson')
+
+// `41004` is the Edisto Bouy Id off of SC coast
+// `spec` is the type of data (spectral wave data)
+// http://www.ndbc.noaa.gov/rt_data_access.shtml
+ndbcToJSON('41004', 'spec').then(bouyData => {
+    console.log(bouyData)
+})
+
+```
 
 ## Contributions
 
