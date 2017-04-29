@@ -21,10 +21,8 @@ const BOUY_DATA_URL = 'http://www.ndbc.noaa.gov/data/realtime2'
  *      // data -> [{...}, {...}]
  *     })
  */
-module.exports = function (stationId, type) {
-  const dataUrl = type
-    ? `${BOUY_DATA_URL}/${stationId}.${type}`
-    : `${BOUY_DATA_URL}/${stationId}.txt`
+module.exports = function (stationId, type = 'txt') {
+  const dataUrl = `${BOUY_DATA_URL}/${stationId}.${type}`
   const outstream = new stream()
   return new Promise((resolve, reject) => {
     const rl = readline.createInterface(request(dataUrl), outstream)
